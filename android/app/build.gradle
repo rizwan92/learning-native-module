@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://s3-ap-southeast-1.amazonaws.com/godel-release/godel/"
+    }
+}
+
+android {
+    //noinspection GradleCompatible
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.facebook.react:react-native:+'
+    compile 'com.instamojo:android-sdk:1.2.6'
+}
